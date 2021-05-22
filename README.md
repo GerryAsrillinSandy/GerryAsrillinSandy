@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @GerryAsrillinSandy
 - 👀 I’m interested in Fullstack Development, Devops, AI/ML, and Data Scienth.
 - 🌱 I’m currently learning DBMS, Phyton, JS, etc.
-- 💞️ I’m looking to collaborate on Developer COmmunity
+- 💞️ I’m looking to collaborate on Developer Community
 - 📫 How to reach me gerryasrillinsandy@gmail.com
 
 <!---
