@@ -5,39 +5,29 @@
         <title>JS Basic</title>
     </head>
     <body>
-        <script>
-            const inputAge = prompt("How old are you?")
-            const myAge = Number(inputAge) //Convert string to number
+        <p>Please Click the button to display an alert box.</p>
+    
+        <button onclick="functionClick()">Click Me</button>
+    
+    <script>
+            //set variable
+            let text = "Hello! I am an alert box!";
 
-            function isAgeOlderThan18(age) {
-	            if(age > 18) return true
-                else return false 
-                }
+                //function when click
+                function functionClick(){
+                    //result giving alert
+                    alert(text); 
 
-            function checkAllowance(age){
-                const isOldEnough = isAgeOlderThan18(age)
-  	            if (isOldEnough) return "You are allowed"
-                else return "You are not allowed"
-                }
-      
-            function canHaveNationalID(age){
-	            const isOldEnough = isAgeOlderThan18(age)
-                if(isOldEnough) return "You can have national ID"
-                else return "You can not have national ID yet"
-                }
+                    //after click will write result
+                    //into body page
+                    text = "Hello! I am write on page now!"
+                    document.writeln(text) 
 
-            const isAllowed = checkAllowance(myAge)
-            const canHaveID = canHaveNationalID(myAge)
+                    //result write into console
+                    text = "Hello! I am the console note!"
+                    console.log(text)
+                }  
+    </script>
 
-            document.writeln("My age is : " + myAge + " years old")
-            document.writeln("</br>" )
-            document.writeln("Am I allowed? " + isAllowed)
-            document.writeln("</br>" )
-            document.writeln("Can I have National ID? " + canHaveID)
-
-                console.log("My age is",myAge,"years old")
-                console.log("Am I allowed?", isAllowed)
-                console.log("Can I have National ID?",canHaveID)
-        </script>
-    </body>
+  </body>
 </html>
