@@ -1,0 +1,165 @@
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    0deg,
+    rgba(129, 127, 127, 0.681) 10%,
+    rgb(221, 221, 221) 80%
+  );
+  height: auto;
+}
+
+/* Tag Selector */
+h1 {
+  font-size: 36px;
+  text-align: left;
+  color: rgb(108, 108, 108);
+  margin: 10px;
+  padding: 5px;
+}
+
+img {
+  display: block;
+  margin: auto;
+  margin-bottom: 5px;
+  width: 300px;
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* Attribute selector */
+[disabled] {
+  background-color: lightgrey;
+}
+
+/* pseudo-class selector */
+a:hover {
+  color: grey;
+}
+
+/* Table selector */
+.table {
+  margin: auto;
+  margin-bottom: 15%;
+  width: 85%;
+  border-collapse: collapse;
+}
+
+.table tr,
+th {
+  border-color: rgba(130, 130, 130, 0.895);
+  border-style: solid;
+  border-width: 1px;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.table td {
+  border-color: rgba(130, 130, 130, 0.895);
+  border-style: solid;
+  border-width: 1px;
+  font-size: 12px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.table .table-no {
+  width: 40px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: top;
+}
+
+.table .table-ff {
+  font-weight: bold;
+  text-align: center;
+  vertical-align: top;
+}
+
+.table .table-number {
+  text-align: center;
+  vertical-align: top;
+}
+
+.table .table-content {
+  text-align: left;
+  vertical-align: top;
+}
+
+/*ID Selector*/
+#form1 {
+  font-size: 14px;
+  text-align: justify;
+}
+
+/* class selector */
+
+.paragraph {
+  margin: auto;
+  justify-content: center;
+  border: dashed rgba(108, 108, 108, 0.323);
+  border-width: 1px;
+  background-color: rgba(245, 245, 220, 0.277);
+  width: 90%;
+}
+
+.paragraph p {
+  color: rgb(108, 108, 108);
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.data1 {
+  margin-bottom: 15px;
+}
+.data1 .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.data1 .row .test {
+  display: inline-block;
+  width: 21.5%;
+  background-color: rgb(255, 239, 215);
+  padding: 2px;
+  margin: 5px;
+}
+
+.data1 .row .test h2 {
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+}
+
+.data1 .row .test p {
+  color: rgb(117, 118, 118);
+  text-align: center;
+  font-size: 12px;
+}

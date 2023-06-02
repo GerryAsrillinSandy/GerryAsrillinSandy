@@ -1,0 +1,80 @@
+/* Universal Selector */
+* {
+  margin: 5px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+/* Tag Selector */
+h1 {
+  font-size: 36px;
+  text-align: center;
+  color: blue;
+}
+
+p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 250;
+}
+
+/* Attribute selector */
+[disabled] {
+  background-color: lightgrey;
+}
+
+/* pseudo-class selector */
+a:hover {
+  color: grey;
+}
+
+/* Table selector */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th,
+tr {
+  border: 1px solid black;
+  padding: 4px;
+}
+
+/*ID Selector*/
+#item1 {
+  color: aquamarine;
+}
+
+#item2 {
+  color: red;
+}
+
+#item3 {
+  color: blue;
+}
+
+/* class selector */
+.test {
+  display: block;
+  width: 100%;
+  background-color: blanchedalmond;
+}
+
+.test p {
+  color: aqua;
+  text-align: center;
+  font-size: 14px;
+}
+
+.test h2 {
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+}
