@@ -69,7 +69,7 @@ body {
 }
 
 .home-content {
-  max-width: 595px;
+  max-width: 600px;
 }
 
 .home-content h1 {
@@ -94,7 +94,7 @@ body {
 .home-content h3 {
   position: relative;
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   color: #00abf0;
 }
 
@@ -113,7 +113,7 @@ body {
 .home-content p {
   position: relative;
   text-align: justify;
-  width: 85%;
+  width: 75%;
   font-size: 14px;
   margin: 20px 0 40px;
 }
@@ -266,8 +266,8 @@ body {
 .home-imgHover {
   position: absolute;
   top: 0;
-  right: 3px;
-  width: 468px;
+  right: 30px;
+  width: 500px;
   height: 100%;
   background: transparent;
   transition: 3s;
