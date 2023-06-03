@@ -134,3 +134,49 @@ body {
 .btn-box a:hover::before {
   width: 100%;
 }
+
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.home-sci a:hover {
+  color: #081b29;
+}
+
+.home-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.home-sci a:hover::before {
+  width: 100%;
+}
