@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Implementation 1</title>
+  </head>
+  <body>
+    <h1>JS Test Page</h1>
+
+    <div id="main">
+      <h2 id="header2"></h2>
+      <p id="myParagraph"></p>
+    </div>
+
+    <p id="myElement"></p>
+
+    <img src="download (2).jpeg" alt="logo test" id="myImages" /><br />
+
+    <button id="myButton" class="active">Click Me !</button>
+
+    <script>
+      let myParagraph = document.getElementById("myElement");
+      console.log(myParagraph);
+
+      myParagraph.innerHTML = "Ini sebuah paragraph";
+      console.log(myParagraph);
+
+      //Isi dari Div
+      let myParagraph2 = document.getElementById("main");
+      console.log(myParagraph2);
+
+      let isiParagraph = myParagraph2.getElementsByTagName("h2");
+      isiParagraph[0].innerHTML = "Test";
+
+      console.log(isiParagraph[0]);
+
+      let mainParagraph = myParagraph;
+
+      mainParagraph.innerHTML =
+        "Ini paragraph dan <b>'" + isiParagraph[0].innerHTML + "'<b>";
+
+      //Changing attribute
+      let changeImage = document.getElementById("myImages");
+      console.log(changeImage);
+
+      changeImage.setAttribute("src", "images.png");
+
+      //add and removing class
+      const button1 = document.getElementById("myButton");
+      //   button1.classList.add("active");
+      button1.classList.remove("active");
+      console.log(button1);
+
+      const myDiv = document.getElementById("main");
+      myDiv.style.backgroundColor = "Red";
+
+      console.log(myDiv);
+
+      //Pilih button
+      var button2 = document.getElementById("myButton");
+
+      button2.addEventListener("click", function () {
+        var randomColor =
+          "#" + Math.floor(Math.random() * 16777215).toString(16);
+        console.log(randomColor);
+
+        var randomColor2 =
+          "#" + Math.floor(Math.random() * 10000000).toString(16);
+        console.log(randomColor2);
+
+        document.body.style.backgroundColor = randomColor;
+        myDiv.style.backgroundColor = randomColor2;
+      });
+    </script>
+  </body>
+</html>
