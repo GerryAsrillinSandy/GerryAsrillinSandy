@@ -7,62 +7,59 @@
     <title>JS Implementation 1</title>
   </head>
   <body>
-    <h1>JS Test Page</h1>
+    <h1 id="myHeader">JS Test Page</h1>
 
     <div id="main">
-      <h2 id="header2"></h2>
-      <p id="myParagraph"></p>
+      <h2 id="myElement"></h2>
+      <p id="myElement2"></p>
     </div>
 
-    <p id="myElement"></p>
+    <p id="mixParagraph"></p>
 
-    <img src="download (2).jpeg" alt="logo test" id="myImages" /><br />
+    <img src="image.jpeg" alt="logo test" id="myImages" /><br />
 
-    <button id="myButton" class="active">Click Me !</button>
+    <button id="myButton">Click Me !</button>
 
     <script>
-      //Selecting Elements
-      let myParagraph = document.getElementById("myElement");
-      console.log(myParagraph);
+      // Selecting Elements
+      let myContent = document.getElementById("main");
+      console.log(myContent);
 
-      myParagraph.innerHTML = "Ini sebuah paragraph";
-      console.log(myParagraph);
+      // Changing Element Content
+      const myParagraph1 = document.getElementById("myElement");
+      myParagraph1.innerHTML = "Ini sebuah sub-header";
+      console.log(myParagraph1);
 
-      // Mengambil isi dari div
-      let myParagraph2 = document.getElementById("main");
+      const myParagraph2 = document.getElementById("myElement2");
+      myParagraph2.innerHTML = "Ini sebuah paragraph";
       console.log(myParagraph2);
 
-      // Changing element Content
-      let isiParagraph = myParagraph2.getElementsByTagName("h2");
-      isiParagraph[0].innerHTML = "Test";
+      // Get the tag value
+      let mainParagraph = myContent.getElementsByTagName("h2");
 
-      console.log(isiParagraph[0]);
-
-      let mainParagraph = myParagraph;
-
-      mainParagraph.innerHTML =
-        "Ini paragraph dan <b>'" + isiParagraph[0].innerHTML + "'<b>";
+      const paragraphMix = document.getElementById("mixParagraph");
+      paragraphMix.innerHTML =
+        "Ini paragraph dan <b>'" + mainParagraph[0].innerHTML + "'<b>";
 
       // Changing attribute
       let changeImage = document.getElementById("myImages");
-      console.log(changeImage);
-
-      changeImage.setAttribute("src", "images.png");
+      changeImage.setAttribute("src", "newImages.png");
 
       // Add and removing class
       const button1 = document.getElementById("myButton");
-      //   button1.classList.add("active");
-      button1.classList.remove("active");
-      console.log(button1);
+      button1.classList.add("active");
+      // Uncomment code dibawah untuk menghilangkan class
+      // button1.classList.remove("active");
 
+      // Changing Element Style
       const myDiv = document.getElementById("main");
-      myDiv.style.backgroundColor = "Red";
+      myDiv.style.textAlign = "center";
+      paragraphMix.style.textAlign = "center";
 
-      console.log(myDiv);
-
-      //Pilih button
+      // Klik Button
       var button2 = document.getElementById("myButton");
 
+      // Menambahkan event listener pada saat button di klik
       button2.addEventListener("click", function () {
         var randomColor =
           "#" + Math.floor(Math.random() * 16777215).toString(16);
