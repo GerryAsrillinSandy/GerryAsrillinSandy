@@ -2,29 +2,7 @@
 <html>
   <head>
     <title>Form Example</title>
-    <style>
-      body {
-        text-align: center;
-        padding-top: 100px;
-        font-family: Arial, sans-serif;
-      }
-
-      input[type="text"] {
-        padding: 10px;
-        font-size: 16px;
-      }
-
-      button {
-        padding: 10px 20px;
-        font-size: 16px;
-        margin-top: 10px;
-      }
-
-      #result {
-        margin-top: 20px;
-        font-size: 20px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Form Example</h1>
@@ -33,15 +11,6 @@
     <button id="submitButton">Submit</button>
     <div id="result"></div>
 
-    <script>
-      var button = document.getElementById("submitButton");
-      var textInput = document.getElementById("textInput");
-      var result = document.getElementById("result");
-
-      button.addEventListener("click", function () {
-        var inputValue = textInput.value;
-        result.innerHTML = "You entered: " + inputValue;
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
