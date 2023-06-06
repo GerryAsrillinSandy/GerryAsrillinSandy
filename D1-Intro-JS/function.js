@@ -1,89 +1,79 @@
-// function getMinLength(a, k) {
-//   var arr = [];
-//   for (var i = 0; i < a.length; i++) {
-//     let number = a[i];
-//     while (arr.length > 0 && number * arr[arr.length - 1] <= k) {
-//       number = number * arr.pop();
-//     }
-//     arr.push(number);
-//   }
-//   return arr.length;
-// }
+// Contoh function sederhana 1
+const message = prompt("Silahkan masukkan nama anda :");
 
-// console.log(getMinLength(a, k));
+greet(message);
+greet("Gerry");
+greet("Bob");
+greet("Andy");
+greet("Sandy");
 
-///////////////////////////////////////////////////////////////////////
+function greet(name) {
+  console.log(`Hello ${name}`);
+}
 
-// let message = prompt("Write Your Name: ");
+// Contoh function sederhana 2
+var message1 = prompt("test : ");
 
-// function greet(name) {
-//   return `Hello, ${name}!`;
-// }
+function tulisan() {
+  return message1;
+}
 
-// console.log(greet(message));
+console.log("Test Messages : " + tulisan(message1));
 
-///////////////////////////////////////////////////////////////////////
-
-// function addNumbers(a, b) {
-//   return a + b;
-// }
-// const sum = addNumbers(2, 3);
-// console.log(sum); // Output: 5
-
-///////////////////////////////////////////////////////////////////////
-// const a = parseInt(prompt("Input a value: "));
-// const b = parseInt(prompt("Input b Value: "));
-
-// const sum = function (a, b) {
-//   return a + b;
-// };
-
-// console.log(sum(a, b));
-
-/////////////////////////////////////////////////////////////////////
-// const multiply = (a, b) => a * b;
-// console.log(multiply(2, 3)); // Output: 6
-
-////////////////////////////////////////////////////////////////////
-// greet("Alice"); // Output: "Hello, Alice!"
-// function greet(name) {
-//   console.log(`Hello, ${name}!`);
-// }
-
-//////////////////////////////////////////////////////////////////
-function add(a, b) {
+// Basic general function
+function addNumber(a, b) {
   return a + b;
 }
 
-function subtract(a, b) {
+console.log("Basic function = " + addNumber(3, 4));
+
+// Anonymous Function
+const sum2 = function addNumber(a, b) {
+  return a + b;
+};
+console.log("Anonymous function = " + sum2(3, 4));
+
+// Arrow Function
+const multiply = (a, b) => a + b;
+console.log("Arrow Function = " + multiply(3, 4));
+
+// Practice membuat kalkulator sederhana menggunakan function
+function penambahan(a, b) {
+  return a + b;
+}
+
+function pengurangan(a, b) {
   return a - b;
 }
 
-function multiply(a, b) {
+function perkalian(a, b) {
   return a * b;
 }
-function divide(a, b) {
+
+function pembagian(a, b) {
   return a / b;
 }
 
-const num1 = Number(prompt("Enter first number:"));
-const num2 = Number(prompt("Enter second number:"));
+var angkaPertama = Number(prompt("Masukkan Angka Pertama : "));
+var angkaKedua = Number(prompt("Masukkan Angka Kedua : "));
 
-console.log(`Sum: ${add(num1, num2)}`);
-console.log(`Difference: ${subtract(num1, num2)}`);
-console.log(`Product: ${multiply(num1, num2)}`);
-console.log(`Quotient: ${divide(num1, num2)}`);
+console.log("Hasil Penambahan  = " + penambahan(angkaPertama, angkaKedua));
+console.log("Hasil Pengurangan = " + pengurangan(angkaPertama, angkaKedua));
+console.log("Hasil Perkalian   = " + perkalian(angkaPertama, angkaKedua));
+console.log("Hasil Pembagian   = " + pembagian(angkaPertama, angkaKedua));
 
-// let num = parseInt(prompt("How much line do you want to make?"));
+//Practice membuat segitiga
+let num3 = parseInt(prompt("Berapa banyak baris bintang yang ingin dibuat?"));
 
-// function makeLine(length) {
-//   var line = "";
-//   for (var i = 1; i <= length; i++) {
-//     for (var j = 1; j <= i; j++) {
-//       line += "*";
-//     }
-//     line += "\n";
-//   }
-//   return line + "\n";
-// }
-// console.log(makeLine(`${num}`));
+function buatSegitiga(length) {
+  var garis = "";
+  for (var i = 1; i <= length; i++) {
+    for (var j = 1; j <= i; j++) {
+      garis += "*";
+    }
+    garis += "\n";
+  }
+  return garis + "\n";
+}
+
+console.log(buatSegitiga(`${num3}`));
