@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      //Selecting HTML elements
+      $("p");
+      //Selecting classes
+      $(".myClass");
+      //Selecting elements by name
+      $("#myInput");
+
+      //Change CSS classes
+      $("p").css("color", "red");
+
+      //Handling events
+      $(document).ready(function () {
+        $("p").click(function () {
+          $(this).hide();
+        });
+
+        //Get Value Input
+        $("#buttonSubmit").on("click", function () {
+          let myAlert = $("#myInput").val();
+          alert(myAlert);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="myClass">
+      <h1 id="myElement">Test Input</h1>
+      <form action="">
+        <label id="myLabel" name="myLabel">Name</label>
+        <input type="text" id="myInput" name="myInput" />
+        <input
+          type="submit"
+          id="buttonSubmit"
+          name="buttonSubmit"
+          value="Submit"
+        />
+      </form>
+    </div>
+
+    <h2>Test Document Click</h2>
+    <p>Please click on me, So I will disappear.</p>
+    <p>Click me away!</p>
+    <p>Click me too!</p>
+  </body>
+</html>
