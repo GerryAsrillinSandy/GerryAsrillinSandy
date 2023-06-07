@@ -36,28 +36,31 @@
     </div>
 
     <script>
-      // Function to fetch and display users from API
-      function fetchUsers() {
-        fetch("https://api.example.com/users")
-          .then((response) => response.json())
-          .then((users) => {
-            const userListElement = document.querySelector(".user-list");
+      fetch("https://dummyjson.com/todos/user/5")
+        .then((res) => res.json())
+        .then(console.log);
+      // // Function to fetch and display users from API
+      // function fetchUsers() {
+      //   fetch("https://api.example.com/users")
+      //     .then((response) => response.json())
+      //     .then((users) => {
+      //       const userListElement = document.querySelector(".user-list");
 
-            users.forEach((user) => {
-              const userItem = document.createElement("li");
-              userItem.classList.add("user-item");
-              userItem.innerHTML = `
-              <span class="user-name">${user.name}</span>
-              <span class="user-email">${user.email}</span>
-            `;
+      //       users.forEach((user) => {
+      //         const userItem = document.createElement("li");
+      //         userItem.classList.add("user-item");
+      //         userItem.innerHTML = `
+      //         <span class="user-name">${user.name}</span>
+      //         <span class="user-email">${user.email}</span>
+      //       `;
 
-              userListElement.appendChild(userItem);
-            });
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
-      }
+      //         userListElement.appendChild(userItem);
+      //       });
+      //     })
+      //     .catch((error) => {
+      //       console.error("Error:", error);
+      //     });
+      //}
 
       // Call the fetchUsers function when the page loads
       window.addEventListener("load", fetchUsers);
