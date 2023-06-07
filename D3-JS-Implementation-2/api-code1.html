@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>API Consumption Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      .user-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .user-item {
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      .user-name {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Users</h1>
+      <ul class="user-list"></ul>
+    </div>
+
+    <script>
+      // Function to fetch and display users from API
+      function fetchUsers() {
+        fetch("https://api.example.com/users")
+          .then((response) => response.json())
+          .then((users) => {
+            const userListElement = document.querySelector(".user-list");
+
+            users.forEach((user) => {
+              const userItem = document.createElement("li");
+              userItem.classList.add("user-item");
+              userItem.innerHTML = `
+              <span class="user-name">${user.name}</span>
+              <span class="user-email">${user.email}</span>
+            `;
+
+              userListElement.appendChild(userItem);
+            });
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+
+      // Call the fetchUsers function when the page loads
+      window.addEventListener("load", fetchUsers);
+    </script>
+  </body>
+</html>

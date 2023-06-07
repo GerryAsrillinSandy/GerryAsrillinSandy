@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>API Consumption Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      .user-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .user-item {
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      .user-name {
+        font-weight: bold;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Users</h1>
+      <ul class="user-list"></ul>
+    </div>
+
+    <script>
+      // Function to fetch and display users from API
+      function fetchUsers() {
+        $.ajax({
+          url: "https://api.example.com/users",
+          method: "GET",
+          dataType: "json",
+          success: function (users) {
+            var userListElement = $(".user-list");
+
+            users.forEach(function (user) {
+              var userItem = $("<li>").addClass("user-item").html(`
+              <span class="user-name">${user.name}</span>
+              <span class="user-email">${user.email}</span>
+            `);
+
+              userListElement.append(userItem);
+            });
+          },
+          error: function (xhr, status, error) {
+            console.error("Error:", error);
+          },
+        });
+      }
+
+      // Call the fetchUsers function when the page loads
+      $(document).ready(fetchUsers);
+    </script>
+  </body>
+</html>
