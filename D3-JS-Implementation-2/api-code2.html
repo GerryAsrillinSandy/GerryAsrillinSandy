@@ -40,20 +40,31 @@
       // Function to fetch and display users from API
       function fetchUsers() {
         $.ajax({
-          url: "https://api.example.com/users",
+          url: "https://dummyjson.com/todos/user/5",
           method: "GET",
           dataType: "json",
           success: function (users) {
-            var userListElement = $(".user-list");
+            // var userListElement = $(".user-list");
 
-            users.forEach(function (user) {
-              var userItem = $("<li>").addClass("user-item").html(`
-              <span class="user-name">${user.name}</span>
-              <span class="user-email">${user.email}</span>
-            `);
+            // users.forEach(function (user) {
+            //   var userItem = $("<li>").addClass("user-item").html(`
+            //   <span class="user-name">${user.name}</span>
+            //   <span class="user-email">${user.email}</span>
+            // `);
 
-              userListElement.append(userItem);
-            });
+            //   userListElement.append(userItem);
+            // });
+
+            var todos = users.todos;
+            console.log(todos);
+
+            for (var i = 0; i < todos.length; i++) {
+              var myID = todos[i].id;
+              var myToDo = todos[i].todo;
+
+              console.log("ID Saya : " + myID);
+              console.log("Today To Do : " + myToDo);
+            }
           },
           error: function (xhr, status, error) {
             console.error("Error:", error);
