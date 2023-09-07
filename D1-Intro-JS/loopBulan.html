@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop Tanggal dalam Bulan</title>
+    <style>
+      /* tambahkan CSS untuk tampilan jika diperlukan */
+    </style>
+  </head>
+  <body>
+    <h1>Loop Tanggal dalam Bulan</h1>
+    <button onclick="mulaiLoop()">Mulai Loop</button>
+    <button onclick="clearScreen()">Clear Screen</button>
+    <div id="hasilLoop"></div>
+
+    <script>
+      function mulaiLoop() {
+        // Variable untuk emasukkan bulan dan tahun menggunakan prompt
+        var tahunInput = prompt("Masukkan tahun (contoh: 2023):");
+        var bulanInput = prompt("Masukkan bulan (1-12):");
+
+        // Validasi input merupakan angka
+        if (
+          !tahunInput ||
+          !bulanInput ||
+          isNaN(tahunInput) ||
+          isNaN(bulanInput)
+        ) {
+          alert("Masukkan tahun dan bulan dalam format angka.");
+          return; // Hentikan eksekusi jika input tidak valid
+        }
+
+        // Parse input menjadi angka
+        var tahun = parseInt(tahunInput);
+        var bulan = parseInt(bulanInput);
+
+        // Validasi bulan berada dalam rentang yang valid (1-12)
+        if (bulan < 1 || bulan > 12) {
+          alert("Bulan harus berada dalam rentang 1-12.");
+          return; // Hentikan eksekusi jika bulan tidak valid
+        }
+
+        // Hitung jumlah hari dalam bulan
+        var jumlahHari = new Date(tahun, bulan, 0).getDate();
+
+        // Simpan hasil loop dalam sebuah variabel baru
+        var hasilLoop = "";
+
+        // Gunakan variabel loop for untuk mengulangi tugas pada setiap tanggal
+        for (var tanggal = 1; tanggal <= jumlahHari; tanggal++) {
+          // Tambahkan tugas atau code di sini, misalnya:
+          hasilLoop += "Baris tanggal " + tanggal + "<br>";
+        }
+
+        // Tampilkan hasil loop di dalam div
+        document.getElementById("hasilLoop").innerHTML = hasilLoop;
+      }
+
+      function clearScreen() {
+        // Membersihkan layar dengan menghapus konten di dalam elemen dengan ID "hasilLoop"
+        document.getElementById("hasilLoop").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
