@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Query Selector</title>
+  </head>
+  <body>
+    <h1>Document Object Model</h1>
+    <h2>Query Selector</h2>
+    <h3>Mencoba menambahkan warna pada paragraph</h3>
+
+    <p>Ini Merupakan Paragraph</p>
+    <p class="contoh">Ini Juga Paragraph</p>
+
+    <ul id="myList">
+      <li>Ayam</li>
+      <li>Kucing</li>
+      <li>Sapi</li>
+      <li>Kambing</li>
+    </ul>
+  </body>
+  <script>
+    document.querySelector("p").style.backgroundColor = "blue";
+    document.querySelector(".contoh").style.backgroundColor = "red";
+
+    var myList = document.getElementById("myList");
+    console.log(myList);
+
+    //Penggunaan Remove Child
+    // myList.removeChild(myList.firstElementChild);
+    myList.removeChild(myList.children[2]);
+  </script>
+</html>

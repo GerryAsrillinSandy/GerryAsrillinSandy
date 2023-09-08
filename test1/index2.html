@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Menu</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .categories-container {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .categories-container ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .categories-container li {
+        display: inline-block;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+
+      .category-option.active {
+        border-bottom: 2px solid #333;
+      }
+
+      .menu-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .menu-item {
+        margin: 10px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .menu-item img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="categories-container">
+      <ul>
+        <li class="category-option active" data-filter="all">All</li>
+        <li class="category-option" data-filter="hot">Hot Coffee</li>
+        <li class="category-option" data-filter="cold">Cold Coffee</li>
+        <li class="category-option" data-filter="powder">Powder Coffee</li>
+      </ul>
+    </div>
+    <div class="menu-container">
+      <div class="menu-item" data-category="hot">
+        <img src="hot_coffee.jpg" width="150px" alt="Hot Coffee" />
+      </div>
+      <div class="menu-item" data-category="cold">
+        <img src="cold_coffee.jpg" width="150px" alt="Cold Coffee" />
+      </div>
+      <div class="menu-item" data-category="powder">
+        <img src="powder_coffee.jpg" width="150px" alt="Powder Coffee" />
+      </div>
+      <!-- Tambahkan lebih banyak item kopi di sini -->
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuItems = document.querySelectorAll(".category-option");
+        const coffeeItems = document.querySelectorAll(".menu-item");
+
+        menuItems.forEach((menuItem) => {
+          menuItem.addEventListener("click", function () {
+            // Hapus kelas "active" dari semua item menu
+            menuItems.forEach((item) => item.classList.remove("active"));
+            // Tambahkan kelas "active" hanya pada item menu yang diklik
+            this.classList.add("active");
+
+            // Dapatkan nilai data-filter dari item menu yang diklik
+            const filter = this.getAttribute("data-filter");
+
+            // Tampilkan atau sembunyikan item kopi berdasarkan filter
+            coffeeItems.forEach((coffeeItem) => {
+              const category = coffeeItem.getAttribute("data-category");
+              if (filter === "all" || filter === category) {
+                coffeeItem.style.display = "block";
+              } else {
+                coffeeItem.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

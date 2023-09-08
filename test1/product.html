@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!-- icon fontawesome-->
+    <script src="https://kit.fontawesome.com/cf76925589.js" crossorigin="anonymous"></script>
+    <!-- logo tab -->
+    <link rel="shortcut icon" href="assets/logo-tabb.png" type="image/x-icon">
+    <!--style-->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/products.css">
+    <title>Coffee.in Products</title>
+</head>
+<body>
+    <!--NAVIGATION-->
+    <header class="navigationn">
+        <img class=logo src="assets/logoo.png" alt="logo">
+        <nav class="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="products.html" class="btn-active">Products</a>
+            <a href="outlets.html">Outlets</a>
+        </nav>
+        <div class="btn-navbar">
+            <a href="login_register.html">
+                <button class="login" type="button">
+                <i class="fas fa-user"></i> Account
+                </button>
+            </a>
+        </div>
+    </header>
+    <!--HOME AUTOSLIDE-->
+    <section>
+        <div class="slides">
+            <div class="slide">
+                <img src="assets/slide1.png" alt="slide1">
+            </div>
+            <div class="slide">
+                <img src="assets/slide2.png" alt="slide2">
+            </div>
+            <div class="slide">
+                <img src="assets/slide3.png" alt="slide3">
+            </div>
+            <div class="slide">
+                <img src="assets/slide4.png" alt="slide4">
+            </div>
+            <div class="slide">
+                <img src="assets/slide5.png" alt="slide5">
+            </div>
+            <div class="manual-buttons">
+                <button class="prev-button" onclick="plusSlides(-1)">&#10094</button>
+                <button class="next-button" onclick="plusSlides(1)">&#10095</button>
+            </div>
+        </div>
+    </section>
+    <!-- content -->
+    <section class="products">
+        <a href="checkout.html"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
+        <h1>OUR MENUS</h1> <br> <br>
+        <div class="categories-container" id="categories">
+            <a href="" class="category-option active" data-filter="all">ALL</a>
+            <a href="" class="category-option" data-filter="hot">HOT COFFEE</a>
+            <a href="" class="category-option" data-filter="cold">COLD COFFEE</a>
+            <a href="" class="category-option" data-filter="powder">POWDER COFFEE</a>
+        </div>
+        <br> <br>
+        <!-- menu -->
+        <div class="menu-container">
+            <!-- Baris 1 -->
+            <div class="menu-item" data-category="hot">
+                <img src="assets/1.hot_Vanilla_Latte_White.png" alt="hot 1">
+                <h2>Vanilla Latte White</h2>
+                <p>Rp. 39.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="hot">
+                <img src="assets/2.hot_Shakerato_Italian_Coffee.png" alt="hot 2">
+                <h2>Shakerato Italian Coffe</h2>
+                <p>Rp. 39.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="hot">
+                <img src="assets/3.hot_Mugwort_Latte.png" alt="hot 3">
+                <h2>Mugwort Latte</h2>
+                <p>Rp. 45.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="hot">
+                <img src="assets/4.hot_Misti_Coffee_with_Milk.png" alt="hot 4">
+                <h2>Misto Coffe With Milk</h2>
+                <p>Rp. 40.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <!-- Baris 2 -->
+            <div class="menu-item" data-category="hot">
+                <img src="assets/5.hot_Long_Black_Coffee.png" alt="hot 5">
+                <h2>Long Black Coffe</h2>
+                <p>Rp. 30.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="hot">
+                <img src="assets/6.hot_Hazelnut_Bianco_Latte.png" alt="hot 6">
+                <h2>Hazelnut Bianco Latte</h2>
+                <p>Rp. 50.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="hot">
+                <img src="assets/7.hot_Espresso_Coffee.png" alt="hot 7">
+                <h2>Espresso Coffe</h2>
+                <p>Rp. 37.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="hot">
+                <img src="assets/8.hot_Hot_Coffe_Cappucino.jpg" alt="hot 8">
+                <h2>Hot Cappucino</h2>
+                <p>Rp. 42.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <!-- Baris 3 -->
+            <div class="menu-item" data-category="hot">
+                <img src="assets/9.hot_Caramel.png" alt="hot 9">
+                <h2>Hot Caramel</h2>
+                <p>Rp. 40.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="hot">
+                <img src="assets/10.hot_Hot_Matcha_Latte.jpg" alt="hot 10">
+                <h2>Hot Matcha Latte</h2>
+                <p>Rp. 35.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="hot">
+                <img src="assets/11.hot_Cinnamon_Dolce_Latte.png" alt="hot 11">
+                <h2>Cinnamon Dolce Latte</h2>
+                <p>Rp. 37.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="hot">
+                <img src="assets/12.hot_Honey_Almondmilk_Flat_White.png" alt="hot 12">
+                <h2>Honey Almondmilk</h2>
+                <p>Rp. 48.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <!-- Baris 4 -->
+            <div class="menu-item" data-category="cold">
+                <img src="assets/1.cold_Black_Sesame_Frappucino.jpg" alt="cold 1">
+                <h2>Black Sesame Frappucino</h2>
+                <p>Rp. 40.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="cold">
+                <img src="assets/2.cold_Glace_Coffee.jpg" alt="cold 2">
+                <h2>Glace Coffee</h2>
+                <p>Rp. 30.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="cold">
+                <img src="assets/3.cold_Iced_Espresso.jpg" alt="cold 3">
+                <h2>Iced Espresso</h2>
+                <p>Rp. 31.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="cold">
+                <img src="assets/4.cold_Iced_Peppermint_Mocha.jpg" alt="cold 4">
+                <h2>Iced Pappermint Mocha</h2>
+                <p>Rp. 49.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <!-- Baris 5 -->
+            <div class="menu-item" data-category="cold">
+                <img src="assets/5.cold_Java_Chip_Frappucino.jpg" alt="cold 5">
+                <h2>Java Chip Frappucino</h2>
+                <p>Rp. 48.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="cold">
+                <img src="assets/6.cold_Lotus_Coffeelatte.jpg" alt="cold 6">
+                <h2>Lotus Coffe Latte</h2>
+                <p>Rp. 45.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="cold">
+                <img src="assets/7.cold_Matcha_Frappucino.jpg" alt="cold 7">
+                <h2>Matcha Frappucino</h2>
+                <p>Rp. 45.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="cold">
+                <img src="assets/8.cold_Pisvocado_Frappucino.jpg" alt="cold 8">
+                <h2>Pisvacado Frappucino</h2>
+                <p>Rp. 42.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <!-- Baris 6 -->
+            <div class="menu-item" data-category="cold">
+                <img src="assets/9.cold_Strawberry_Creamy_Frappucino.jpg" alt="cold 9">
+                <h2>Strawberry Frappucino</h2>
+                <p>Rp. 48.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="cold">
+                <img src="assets/10.cold_Vanilla_Frappucino.jpg" alt="cold 10">
+                <h2>Vanilla Frappucino</h2>
+                <p>Rp. 45.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+            <div class="menu-item" data-category="cold">
+                <img src="assets/11.cold_Afogato_Ice_Cream.jpg" alt="cold 11">
+                <h2>Afogato Ice Cream</h2>
+                <p>Rp. 45.000</p>
+                <button class="add-to-cart-button"><i class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".category-option");
+  const coffeeItems = document.querySelectorAll(".menu-item");
+
+  // Fungsi untuk menampilkan gambar sesuai dengan filter
+  function applyFilter(filter) {
+    tabs.forEach((t) => t.classList.remove("active"));
+    tabs.forEach((t) => {
+      if (t.getAttribute("data-filter") === filter) {
+        t.classList.add("active");
+      }
+    });
+
+    coffeeItems.forEach((item) => {
+      const category = item.getAttribute("data-category");
+
+      if (filter === "all" || category === filter) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }
+
+  // Event untuk mengaktifkan filter saat mouse mendekati tab
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const filter = tab.getAttribute("data-filter");
+      applyFilter(filter);
+    });
+
+    tab.addEventListener("mouseenter", () => {
+      const filter = tab.getAttribute("data-filter");
+      applyFilter(filter);
+    });
+
+    tab.addEventListener("mouseleave", () => {
+      // Reset filter saat mouse meninggalkan tab
+      applyFilter("all");
+    });
+  });
+});
+
+        </script>
+        <!-- <script src="JS/script.js"></script>
+        <script src="JS/products.js"></script> -->
+</body>
+</html>
