@@ -31,10 +31,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <!-- <div class="container">
       <h1>Users</h1>
-      <ul class="user-list"></ul>
-    </div>
+      <p id="user-list"></p>
+    </div> -->
 
     <script>
       // Function to fetch and display users from API
@@ -44,17 +44,6 @@
           method: "GET",
           dataType: "json",
           success: function (users) {
-            // var userListElement = $(".user-list");
-
-            // users.forEach(function (user) {
-            //   var userItem = $("<li>").addClass("user-item").html(`
-            //   <span class="user-name">${user.name}</span>
-            //   <span class="user-email">${user.email}</span>
-            // `);
-
-            //   userListElement.append(userItem);
-            // });
-
             var todos = users.todos;
             console.log(todos);
 

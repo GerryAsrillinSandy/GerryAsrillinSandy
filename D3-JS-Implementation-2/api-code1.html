@@ -31,39 +31,41 @@
   </head>
   <body>
     <div class="container">
-      <h1>Users</h1>
-      <ul class="user-list"></ul>
+      <h1>Quotes</h1>
+      <ul class="quotes-list"></ul>
     </div>
 
     <script>
-      fetch("https://dummyjson.com/todos/user/5")
+      fetch("https://dummyjson.com/quotes")
         .then((res) => res.json())
         .then(console.log);
-      // // Function to fetch and display users from API
-      // function fetchUsers() {
-      //   fetch("https://api.example.com/users")
-      //     .then((response) => response.json())
-      //     .then((users) => {
-      //       const userListElement = document.querySelector(".user-list");
 
-      //       users.forEach((user) => {
-      //         const userItem = document.createElement("li");
-      //         userItem.classList.add("user-item");
-      //         userItem.innerHTML = `
-      //         <span class="user-name">${user.name}</span>
-      //         <span class="user-email">${user.email}</span>
+      // Function to fetch and display users from API
+      // function fetchQuotes() {
+      //   fetch("https://dummyjson.com/quotes")
+      //     .then((response) => response.json())
+      //     .then((quotes) => {
+      //       const quotesListElement = document.querySelector(".quotes-list");
+
+      //       quote.forEach((quotes) => {
+      //         const quotesItem = document.createElement("li");
+      //         quoteItem.classList.add("quotes-item");
+      //         quoteItem.innerHTML = `
+      //         <span class="id">${quotes.id}</span>
+      //         <span class="author">${quotes.autor}</span>
+      //         <span class="quote">${quotes.quote}</span>
       //       `;
 
-      //         userListElement.appendChild(userItem);
+      //         userListElement.appendChild(quoteItem);
       //       });
       //     })
       //     .catch((error) => {
       //       console.error("Error:", error);
       //     });
-      //}
+      // }
 
-      // Call the fetchUsers function when the page loads
-      window.addEventListener("load", fetchUsers);
+      // //Call the fetchUsers function when the page loads
+      // window.addEventListener("load", fetchQuotes);
     </script>
   </body>
 </html>
