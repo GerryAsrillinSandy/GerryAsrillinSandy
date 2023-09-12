@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding Element</title>
+  </head>
+  <body>
+    <button id="createElement">Create Element</button>
+    <button id="removeElement">Remove Element</button>
+    <div id="parent">
+      <!-- <div id="element_baru">Ini Element Baru</div> -->
+    </div>
+  </body>
+
+  <script>
+    var createElementButton = document.getElementById("createElement");
+    var removeElementButton = document.getElementById("removeElement");
+
+    var parentElement = document.getElementById("parent");
+
+    createElementButton.addEventListener("click", function () {
+      const newElement = document.createElement("div");
+      newElement.textContent = "Ini New Element";
+      newElement.id = "elementRemove";
+      parentElement.appendChild(newElement);
+    });
+
+    removeElementButton.addEventListener("click", function () {
+      const elementToRemove = document.getElementById("elementRemove");
+
+      if (elementToRemove) {
+        elementToRemove.remove();
+      } else {
+        alert("Tidak ada element yang bisa dihapus");
+      }
+    });
+  </script>
+</html>

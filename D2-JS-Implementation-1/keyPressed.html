@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: aliceblue;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    </style>
+    <title>Event Keyboard Pressed</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="textInput" placeholder="Type Something..." />
+      <p id="outputText">Key Pressed :</p>
+    </div>
+  </body>
+  <script>
+    var textInput = document.getElementById("textInput");
+    var outputText = document.getElementById("outputText");
+    var ctrlPressed = false;
+
+    textInput.addEventListener("keydown", function (event) {
+      const keyPressed = event.key;
+      outputText.textContent = `Key Pressed : ${keyPressed}`;
+
+      if (keyPressed == "Control") {
+        ctrlPressed = true;
+      } else if (ctrlPressed && (keyPressed == "a" || keyPressed == "A")) {
+        alert("Ctrl + A was pressed");
+        ctrlPressed = false;
+      }
+    });
+
+    textInput.addEventListener("keyup", function (event) {
+      const keyPressed = event.key;
+      if (keyPressed == "Control") {
+        ctrlPressed = false;
+      }
+    });
+  </script>
+</html>
