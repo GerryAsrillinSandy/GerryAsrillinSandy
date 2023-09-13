@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mengambil Data dari File JSON Lokal</title>
+  </head>
+  <body>
+    <div id="dataContainer">
+      <h1>Product</h1>
+    </div>
+    <!-- <div id="product-container">
+      <h1>Product</h1>
+      <p>Title: <span id="title"></span></p>
+      <p>Description: <span id="description"></span></p>
+      <p>Stock: <span id="stock"></span></p>
+    </div> -->
+
+    <script>
+      //print di log
+      // var myObj = fetch("https://dummyjson.com/products/")
+      //   .then((res) => res.json())
+      //   .then(console.log);
+
+      // print di new element
+      fetch("https://dummyjson.com/products")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data.products);
+          var myProducts = data.products;
+          // // Menampilkan data JSON di elemen HTML
+          // document.getElementById("title").textContent = data.title;
+          // document.getElementById("description").textContent = data.description;
+          // document.getElementById("stock").textContent = data.stock;
+
+          // Assuming we have a container element with the ID "dataContainer"
+          const container = document.getElementById("dataContainer");
+
+          // Creating a new element to display the fetched data
+          for (var i = 0; i < myProducts.length; i++) {
+            const newDataElement = document.createElement("p");
+            newDataElement.textContent =
+              myProducts[i].id +
+              " | " +
+              myProducts[i].title +
+              " | " +
+              myProducts[i].description +
+              " | " +
+              myProducts[i].stock;
+
+            // Appending the new element to the container
+            container.appendChild(newDataElement);
+          }
+        })
+        .catch((error) => console.error("Gagal mengambil data:", error));
+    </script>
+  </body>
+</html>
