@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <script>
-      //basic array
-      const numbers = [1, 2, 3, 4, 5];
-      const [first, second, , fourth] = numbers;
+  <body></body>
+  <script>
+    //basic array
+    // const numbers = [1, 2, 3, 4, 5];
+    // const [first, second, , fourth] = numbers;
 
-      console.log(first); // Output: 1
-      console.log(second); // Output: 2
-      console.log(fourth); // Output: 4
+    // console.log(first); // Output: 1
+    // console.log(second); // Output: 2
+    // console.log(fourth); // Output: 4
 
-      //basic object
-      const person = {
-        name: "John",
-        age: 30,
-        profession: "Developer",
-      };
+    //    basic object
+    const person = {
+      name: "John",
+      age: 30,
+      profession: "Developer",
+    };
 
-      const { name, age } = person;
+    // var name = person.name;
+    // var age = person.age;
 
-      console.log(name); // Output: John
-      console.log(age); // Output: 30
+    // var newObject = {
+    //   name: name,
+    //   age: age,
+    // };
 
-      //function
-      function calculate(a, b) {
-        const add = a + b;
-        const subtract = a - b;
-        const multiply = a * b;
-        const divide = a / b;
+    const { name, age } = person;
 
-        return [add, subtract, multiply, divide];
-      }
+    console.log(name); // Output: John
+    console.log(age); // Output: 30
 
-      const [add, subtract, multiply, divide] = calculate(4, 7);
+    // //function
+    // function calculate(a, b) {
+    //   const add = a + b;
+    //   const subtract = a - b;
+    //   const multiply = a * b;
+    //   const divide = a / b;
 
-      document.write("<p>Sum: " + add + "</p>");
-      document.write("<p>Difference " + subtract + "</p>");
-      document.write("<p>Product: " + multiply + "</p>");
-      document.write("<p>Quotient " + divide + "</p>");
-    </script>
-  </body>
+    //   return [add, subtract, multiply, divide];
+    // }
+
+    // const [add, subtract, multiply, divide] = calculate(4, 7);
+
+    // document.write("<p>Sum: " + add + "</p>");
+    // document.write("<p>Difference " + subtract + "</p>");
+    // document.write("<p>Product: " + multiply + "</p>");
+    // document.write("<p>Quotient " + divide + "</p>");
+  </script>
 </html>

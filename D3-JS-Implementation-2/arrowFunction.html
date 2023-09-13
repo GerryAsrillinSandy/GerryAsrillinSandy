@@ -15,21 +15,39 @@
 
     <script>
       let myFunction = (a, b) => a * b;
-      document.getElementById("demo1").innerHTML = myFunction(4, 5);
+      //document.getElementById("demo3").innerHTML = myFunction(4, 5);
 
-      let hello = "";
-      hello = () => "Hello World!";
+      myFunction = function (a, b) {
+        return a * b;
+      };
+      document.getElementById("demo3").innerHTML = myFunction(4, 5);
+
+      var hello = "";
+      //traditional
+      hello = function () {
+        return "Hello World";
+      };
+      document.getElementById("demo1").innerHTML = hello();
+
+      //arrow
+      hello = () => "Hello world lagi";
       document.getElementById("demo2").innerHTML = hello();
 
-      hello = function () {
-        return "Hello World Lagi!";
-      };
-      document.getElementById("demo3").innerHTML = hello();
+      // let hello = "";
+      // hello = () => "Hello World!";
+      // document.getElementById("demo2").innerHTML = hello();
 
-      hello = () => {
-        return "Hello World Lagi Lagi!";
-      };
-      document.getElementById("demo4").innerHTML = hello();
+      // //Traditional
+      // hello = function () {
+      //   return "Hello World Lagi!";
+      // };
+      // document.getElementById("demo3").innerHTML = hello();
+
+      // //arrow function
+      // hello = () => {
+      //   return "Hello World Lagi Lagi!";
+      // };
+      // document.getElementById("demo4").innerHTML = hello();
     </script>
   </body>
 </html>
