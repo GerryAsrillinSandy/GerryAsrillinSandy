@@ -2,7 +2,7 @@
 // let num2 = [0, 1, 2, 3, 4];
 
 // var result = getMinLength(num1, num2);
-// console.log(result);
+// console.log("length = " + result);
 
 // function getMinLength(a, k) {
 //   var arr = [num1, num2];
@@ -20,7 +20,7 @@
 //   return arr.length;
 // }
 
-// Contoh function sederhana 1
+// //Contoh function sederhana 1
 // const message = prompt("Silahkan masukkan nama anda :");
 // //const message = "Gerry";
 
@@ -34,7 +34,20 @@
 //   console.log(`Hello ${name}`);
 // }
 
-//Input Declaration
+// const pesan = prompt("Silahkan masukkan nama angka :");
+// //const message = "Gerry";
+
+// tampilkanAngka(pesan);
+// // greet("Gerry");
+// // greet("Bob");
+// // greet("Andy");
+// // greet("Sandy");
+
+// function tampilkanAngka() {
+//   console.log("Nilai = " + pesan);
+// }
+
+// //Input Declaration
 // let pesan = "Ini sebuah pesan";
 // let pesan2 = "Ini masih sebuah pesan";
 
@@ -46,7 +59,7 @@
 // iniPesan(pesan);
 // iniPesan(pesan2);
 
-// Contoh function sederhana 2
+// //Contoh function sederhana 2
 // var message1 = prompt("test : ");
 
 // function tulisan() {
@@ -63,11 +76,11 @@
 // console.log("Basic function = " + addNumber(3, 4));
 
 // // Anonymous Function
-const sum2 = function addNumber(a, b) {
-  return a + b;
-};
+// const sum2 = function addNumber(a, b) {
+//   return a + b;
+// };
 
-console.log("Anonymous function = " + sum2(3, 4));
+// console.log("Anonymous function = " + sum2(3, 4));
 
 // Arrow Function
 const multiply = (a, b) => a * b;

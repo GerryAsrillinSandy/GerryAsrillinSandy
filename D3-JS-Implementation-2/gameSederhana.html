@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permainan Tebak Angka</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      #guess-input {
+        padding: 5px;
+        font-size: 18px;
+      }
+
+      #message {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Permainan Tebak Angka</h1>
+    <p>Masukkan tebakan Anda antara 1 dan 100:</p>
+    <input type="text" id="guess-input" />
+    <button id="guess-button">Tebak</button>
+    <p id="message"></p>
+
+    <script>
+      // Generate angka acak antara 1 dan 100
+      const targetNumber = Math.floor(Math.random() * 100) + 1;
+      console.log(targetNumber);
+
+      const guessInput = document.getElementById("guess-input");
+      const guessButton = document.getElementById("guess-button");
+      const message = document.getElementById("message");
+
+      let attempts = 0;
+
+      guessButton.addEventListener("click", function () {
+        const guess = parseInt(guessInput.value);
+        attempts++;
+
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+          message.textContent = "Masukkan angka antara 1 dan 100.";
+        } else if (guess === targetNumber) {
+          message.textContent = `Selamat! Anda menebak dengan benar angka ${targetNumber} dalam ${attempts} percobaan.`;
+          guessInput.disabled = true;
+          guessButton.disabled = true;
+        } else {
+          const hint =
+            guess < targetNumber ? "terlalu rendah" : "terlalu tinggi";
+          message.textContent = `Tebakan Anda ${hint}. Percobaan ke-${attempts}`;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -51,8 +51,11 @@
               var myID = todos[i].id;
               var myToDo = todos[i].todo;
 
-              console.log("ID Saya : " + myID);
-              console.log("Today To Do : " + myToDo);
+              if ((i = 5)) {
+                console.log("ID Saya : " + myID);
+                console.log("Today To Do : " + myToDo);
+                break;
+              }
             }
           },
           error: function (xhr, status, error) {

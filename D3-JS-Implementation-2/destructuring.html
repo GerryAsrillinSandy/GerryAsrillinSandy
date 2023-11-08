@@ -10,12 +10,12 @@
     // console.log(second); // Output: 2
     // console.log(fourth); // Output: 4
 
-    //    basic object
-    const person = {
-      name: "John",
-      age: 30,
-      profession: "Developer",
-    };
+    // basic object
+    // const person = {
+    //   name: "John",
+    //   age: 30,
+    //   profession: "Developer",
+    // };
 
     // var name = person.name;
     // var age = person.age;
@@ -25,12 +25,37 @@
     //   age: age,
     // };
 
-    const { name, age } = person;
+    // const { name, age } = person;
 
-    console.log(name); // Output: John
-    console.log(age); // Output: 30
+    // console.log(name); // Output: John
+    // console.log(age); // Output: 30
 
-    // //function
+    //
+    const myArray = [1, 2, 3, 4, 5];
+
+    // // Mengakses nilai tertentu dari array
+    // const [first, second, third] = myArray;
+
+    // console.log(first); // Output: 1
+    // console.log(second); // Output: 2
+    // console.log(third); // Output: 3
+
+    //
+    // // Mengakses nilai dari indeks tertentu dalam array
+    const [, , third] = myArray;
+
+    console.log(third); // Output: 3
+
+    //
+    const nestedArray = [1, [2, 3], 4, 5];
+
+    // // Mengakses elemen dalam nested array
+    // const [, [nestedValue1, nestedValue2]] = nestedArray;
+
+    // console.log(nestedValue1); // Output: 2
+    // console.log(nestedValue2); // Output: 3
+
+    //function
     // function calculate(a, b) {
     //   const add = a + b;
     //   const subtract = a - b;
