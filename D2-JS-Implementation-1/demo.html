@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Implementation 1</title>
+  </head>
+  <body>
+    <h1 id="myHeader">JS Test Page</h1>
+
+    <div id="main">
+      <h2 id="myElement"></h2>
+      <p id="myElement2"></p>
+    </div>
+
+    <p id="mixParagraph"></p>
+
+    <img src="image.jpeg" alt="logo test" id="myImages" /><br />
+
+    <button id="myButton">Click Me !</button>
+
+    <script>
+      // Selecting Elements
+      let myContent = document.getElementById("main");
+      console.log(myContent);
+
+      // Changing Element Content
+      const myParagraph1 = document.getElementById("myElement");
+      myParagraph1.innerHTML = "Ini sebuah sub-header";
+      console.log(myParagraph1);
+
+      const myParagraph2 = document.getElementById("myElement2");
+      myParagraph2.innerHTML = "Ini sebuah paragraph";
+      console.log(myParagraph2);
+
+      // Get the tag value
+      let mainParagraph = myContent.getElementsByTagName("h2");
+
+      const paragraphMix = document.getElementById("mixParagraph");
+      paragraphMix.innerHTML =
+        "Ini paragraph dan <b>'" + mainParagraph[0].innerHTML + "'<b>";
+
+      // Changing attribute
+      let changeImage = document.getElementById("myImages");
+      changeImage.setAttribute("src", "newImages.png");
+
+      // Add and removing class
+      const button1 = document.getElementById("myButton");
+      console.log(button1);
+      button1.classList.add("active");
+      // console.log(button1);
+      // Uncomment code dibawah untuk menghilangkan class
+      // button1.classList.remove("active");
+
+      // Changing Element Style
+      const myDiv = document.getElementById("main");
+      myDiv.style.textAlign = "center";
+      paragraphMix.style.textAlign = "center";
+
+      // Klik Button
+      var button2 = document.getElementById("myButton");
+
+      // Menambahkan event listener pada saat button di klik
+      button2.addEventListener("click", function () {
+        var randomColor =
+          "#" + Math.floor(Math.random() * 16777215).toString(16);
+        console.log(randomColor);
+
+        var randomColor2 =
+          "#" + Math.floor(Math.random() * 10000000).toString(16);
+        console.log(randomColor2);
+
+        document.body.style.backgroundColor = randomColor;
+        myDiv.style.backgroundColor = randomColor2;
+      });
+    </script>
+  </body>
+</html>
