@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Key Up Practice</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" id="textInput" placeholder="Type Something ... " />
+      <p id="outputtext">Key Press :</p>
+    </div>
+  </body>
+  <script>
+    const textInput = document.getElementById("textInput");
+    const outputText = document.getElementById("outputtext");
+
+    textInput.addEventListener("keyup", function (event) {
+      var keyPressed = event.key;
+      //   outputText.textContent = `Key Pressed: ${keyPressed}`;
+
+      console.log(keyPressed);
+
+      //   if (keyPressed == "ArrowLeft") {
+      //     alert("Ini ArrowLeft");
+      //   } else if (keyPressed == "ArrowRight") {
+      //     alert("Ini ArrowRight");
+      //   } else if (keyPressed == "ArrowUp") {
+      //     alert("Ini ArrowUp");
+      //   } else if (keyPressed == "ArrowDown") {
+      //     alert("Ini ArrowDown");
+      //   }
+    });
+  </script>
+</html>
