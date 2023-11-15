@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Data Manipulation</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Data JSON</h1>
+      <ul id="result"></ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const resultDiv = $("#result");
+
+        $.ajax({
+          url: "/AjaxAndAPI/data.json",
+          type: "GET",
+          dataType: "json",
+          success: function (data) {
+            let htmlContent = "";
+
+            data.forEach((post) => {
+              post.nama = "Modified Title: " + post.nama;
+
+              if (post)
+                htmlContent += `
+                        <li>Nama: ${post.nama} - Umur: ${post.umur}</li>
+                    `;
+            });
+
+            resultDiv.html(htmlContent);
+          },
+          error: function (error) {
+            console.error("Error:", error);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

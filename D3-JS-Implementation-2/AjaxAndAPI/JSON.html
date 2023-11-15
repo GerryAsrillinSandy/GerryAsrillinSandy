@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar JSON</title>
+  </head>
+  <body>
+    <h1>Data JSON</h1>
+    <ul id="data-Json"></ul>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dataJSON = document.getElementById("data-Json");
+
+      fetch("/AjaxAndAPI/data.json")
+        .then((response) => response.json())
+        .then((data) => {
+          data.forEach((datajson) => {
+            console.log(datajson);
+            const li = document.createElement("li");
+            li.textContent = `${datajson.nama} - ${datajson.umur} `;
+            dataJSON.appendChild(li);
+          });
+        })
+        .catch((error) => {
+          console.error("error fetching data", error);
+        });
+    });
+  </script>
+</html>

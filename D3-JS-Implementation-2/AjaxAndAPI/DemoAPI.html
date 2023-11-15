@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Example to Get Data From API</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contoh Website Menggunakan AJAX</h1>
+      <button id="getDataBtn">Tampilkan Data dari API</button>
+      <div id="result"></div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#getDataBtn").on("click", function () {
+        $.ajax({
+          url: "https://dummyjson.com/quotes/1",
+          method: "GET",
+          success: function (data) {
+            $("#result").html(
+              "<p>Quote : " +
+                data.quote +
+                "</p><p>Author : " +
+                data.author +
+                "</p>"
+            );
+          },
+          error: function (error) {
+            console.log("Error : " + error);
+          },
+        });
+      });
+    });
+  </script>
+</html>
