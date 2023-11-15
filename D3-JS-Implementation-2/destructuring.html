@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 - Destructuring</title>
+  </head>
+
+  <body>
+    <h1>Ini Destructuring</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+  </body>
+
+  <script>
+    //Standart Destructuring
+    const myArray = [1, 2, 3, 4, 5];
+    const [, , third] = myArray;
+
+    document.getElementById("demo").innerHTML = third;
+
+    const nestedArray = [1, [2, 3], 4, 5];
+
+    const [, [nestedValue1, nestedValue2]] = nestedArray;
+    document.getElementById("demo1").innerHTML =
+      nestedValue1 + ", " + nestedValue2;
+  </script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ini SpreadSyntax</title>
+  </head>
+  <body>
+    <h1>Ini Spread Syntax</h1>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+  </body>
+  <script>
+    const array1 = [1, 2, 3];
+    const array2 = [4, 5, 6];
+
+    //Contoh Spread Variabel
+    const numbersCombined = [...array1, ...array2];
+
+    const numbers = [1, 2, 3, 4, 5, 6];
+
+    const [one, two, ...rest] = numbers;
+
+    document.getElementById("demo").innerHTML = numbersCombined;
+    document.getElementById("demo2").innerHTML = one;
+    document.getElementById("demo3").innerHTML = two;
+    document.getElementById("demo4").innerHTML = rest;
+  </script>
+</html>

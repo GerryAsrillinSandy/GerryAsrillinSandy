@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 - Template Literals</title>
+  </head>
+  <body>
+    <h1>Ini Template Literals</h1>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+  </body>
+  <script>
+    // Back Ticks Syntax
+    let text = `Hello World`;
+    document.getElementById("demo").innerHTML = text;
+
+    // Quotes inside string
+    let text2 = `Ini kutip 'satu' dan ini kutip "dua"`;
+    document.getElementById("demo2").innerHTML = text2;
+
+    let text4 = 'Ini saya "juga"';
+
+    //Multiline String
+    let text5 = `baris 1 </br>
+                 baris 2 </br>
+                 baris 3
+                `;
+    document.getElementById("demo3").innerHTML = text5;
+
+    // Interpolation
+    let firstName = "Gerry";
+    let lastName = "Sandy";
+
+    let text3 = `Ini saya ${firstName} ${lastName}`;
+    document.getElementById("demo4").innerHTML = text3;
+
+    //Variabel Subtitution
+    let price = 10;
+    let VAT = 0.11;
+    let total = `Total : ${price * (1 + VAT)}`;
+    let mySubtitution = price * (1 + VAT);
+
+    total = "Total " + mySubtitution;
+    document.getElementById("demo5").innerHTML = total;
+
+    //HTML Templates
+    let header = "Template Literals";
+    let tags = ["template literals", "js", "es6"];
+
+    let html = `<h2>${header}</h2><ul>`;
+
+    for (const x of tags) {
+      html += `<li>${x}</li>`;
+    }
+
+    html += `</ul>`;
+    document.getElementById("demo6").innerHTML = html;
+  </script>
+</html>
