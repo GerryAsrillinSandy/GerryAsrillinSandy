@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>API Data Manipulation</title>
+    <title>Belajar JSON pakai ajax</title>
     <!-- <link rel="stylesheet" href="styles.css" /> -->
   </head>
   <body>
@@ -25,11 +25,9 @@
             let htmlContent = "";
 
             data.forEach((post) => {
-              post.nama = "Modified Title: " + post.nama;
-
               if (post)
                 htmlContent += `
-                        <li>Nama: ${post.nama} - Umur: ${post.umur}</li>
+                        <li>${post.nama} - ${post.umur}</li>
                     `;
             });
 
