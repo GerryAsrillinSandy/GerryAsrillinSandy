@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Update a todo
+  // Update todo
   async function updateTodo(id, todo, completed) {
     try {
       await fetch(`https://dummyjson.com/todos/${id}`, {
@@ -66,14 +66,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Delete a todo
+  // Delete todo
   async function deleteTodo(id) {
     try {
       await fetch(`https://dummyjson.com/todos/${id}`, {
         method: "DELETE",
       });
 
-      // Remove the corresponding row from the table
+      // Menghapus corresponding row dari table
       const row = document.querySelector(
         `#todoTable tbody tr[data-id="${id}"]`
       );
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Enable editing for a todo
+  // Enable editing untuk todo
   function enableEdit(row) {
     const titleCell = row.querySelector("td:nth-child(2)");
     const originalTitle = titleCell.textContent;
@@ -98,24 +98,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     titleCell.textContent = "";
     titleCell.appendChild(editInput);
 
-    // Add event listener for the Enter key to save changes
+    // Add event listener untuk Enter key pada saat menyimpan perubahan
     editInput.addEventListener("keyup", (event) => {
       if (event.key === "Enter") {
         const completedCheckbox = row.querySelector('input[type="checkbox"]');
         updateTodo(row.dataset.id, editInput.value, completedCheckbox.checked);
 
-        // Revert to non-edit mode
+        // Revert ke non-edit mode
         disableEdit(row);
 
         console.log("Todo edited and updated successfully.");
       }
     });
 
-    // Focus on the input
+    // Focus ke input mode
     editInput.focus();
   }
 
-  // Disable editing for a todo
+  // Disable pengeditan todo
   function disableEdit(row) {
     const titleCell = row.querySelector("td:nth-child(2)");
     const editInput = titleCell.querySelector('input[type="text"]');
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Helper function to create a table row
+  // Helper function untuk membuat row tabel
   function createTableRow(todo) {
     const row = document.createElement("tr");
     row.setAttribute("data-id", todo.id);
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         </td>
       `;
 
-    // Add event listeners for edit and delete buttons
+    // Add event listeners untuk edit dan delete buttons
     const editBtn = row.querySelector(".edit-btn");
     const deleteBtn = row.querySelector(".delete-btn");
 
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Fetch initial data
   fetchData();
 
-  // Event listener for Create Todo button
+  // Event listener untuk membuat Todo button
   const createTodoBtn = document.getElementById("createTodoBtn");
   createTodoBtn.addEventListener("click", () => {
     const todoText = prompt("Enter a new todo:");
