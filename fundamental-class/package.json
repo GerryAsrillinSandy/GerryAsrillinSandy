@@ -1,0 +1,17 @@
+{
+  "name": "gerryasrillinsandy",
+  "version": "1.0.0",
+  "description": "- 👋 Hi, I’m @GerryAsrillinSandy - 👀 I’m interested in Fullstack Development, Devops, AI/ML, and Data Scienth. - 🌱 I’m currently learning DBMS, Phyton, JS, etc. - 💞️ I’m looking to collaborate on Developer Community - 📫 How to reach me gerryasrillinsandy@gmail.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0"
+  }
+}
